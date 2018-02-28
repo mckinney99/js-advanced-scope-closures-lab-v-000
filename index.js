@@ -1,6 +1,6 @@
 function produceDrivingRange(blockrange){
   return function(trip){
-    return distance < trip
+    return blockrange < trip
   }
 }
 
