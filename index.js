@@ -1,5 +1,6 @@
 function produceDrivingRange(blockrange){
   return function(trip){
+    [num, th] = blockString.split("th")
     if (trip > blockrange) {
       return `${distance - blockRange} blocks out of range`
     } else {
