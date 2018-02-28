@@ -4,4 +4,4 @@ function produceDrivingRange(distance){
   }
 }
 
-const
+const produceDrivingRangeForTen = produceDrivingRange(10)
