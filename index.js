@@ -1,12 +1,21 @@
-function produceDrivingRange(blockrange){
-  return function(trip){
-    [num, th] = blockString.split("th")
-    if (trip > blockrange) {
-      return `${distance - blockRange} blocks out of range`
+function produceDrivingRange(blockRange){
+  return function(startingBlock, endingBlock){
+
+    let start = parseInt(startingBlock);
+    let end = parseInt(endingBlock);
+    let distanceToTravel = Math.abs(end - start);
+    let difference = blockRange - distanceToTravel;
+
+    if( difference > 0){
+      return `within range by ${difference}`
     } else {
-      return `within range by ${blockRange - distance}`
+      return `${Math.abs(difference)} blocks out of range`
     }
   }
 }
 
-const produceDrivingRangeForTen = produceDrivingRange(10)
+function produceTipCalculator(percent) {
+  return function(price) {
+    return price *= percent;
+  }
+}
