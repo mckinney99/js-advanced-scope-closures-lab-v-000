@@ -1,7 +1,6 @@
 function produceDrivingRange(distance){
   return function(trip){
-    if distance < trip
-    return 'true'
+    return distance < trip
   }
 }
 
